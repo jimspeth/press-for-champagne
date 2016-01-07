@@ -6,22 +6,32 @@
 //  Copyright © 2016 Jimco. All rights reserved.
 //
 
+#import <Parse/Parse.h>
 #import "ViewController.h"
-
-@interface ViewController ()
-
-@end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.imageView.userInteractionEnabled = YES;
+    
+    UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(requestChampagne)];
+    [self.imageView addGestureRecognizer:recognizer];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)requestChampagne
+{
+    PFPush *push = [PFPush new];
+    [push setMessage:@"More Champagne, please!"];
+    [push sendPushInBackground];
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Champagne Requested"
+                                                                   message:nil
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:@"Great!" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {}]];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 @end

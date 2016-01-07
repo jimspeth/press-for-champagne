@@ -23,7 +23,11 @@
 
 - (void)requestChampagne
 {
+    PFQuery *query = [PFInstallation query];
+    [query whereKey:@"objectId" notEqualTo:[PFInstallation currentInstallation].objectId];
+    
     PFPush *push = [PFPush new];
+    [push setQuery:query];
     [push setMessage:@"More Champagne, please!"];
     [push sendPushInBackground];
     

@@ -55,11 +55,13 @@
 
 - (void)requestChampagne
 {
-    PFQuery *query = [PFInstallation query];
-    [query whereKey:@"objectId" notEqualTo:[PFInstallation currentInstallation].objectId];
-    
     PFPush *push = [PFPush new];
-    [push setQuery:query];
+    NSString *installationId = [PFInstallation currentInstallation].objectId;
+    if (installationId) {
+        PFQuery *query = [PFInstallation query];
+        [query whereKey:@"objectId" notEqualTo:installationId];
+        [push setQuery:query];
+    }
     [push setMessage:self.message];
     [push sendPushInBackground];
     

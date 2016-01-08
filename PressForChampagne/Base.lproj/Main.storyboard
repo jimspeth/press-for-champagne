@@ -26,8 +26,6 @@
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vRa-ZA-0hR" secondAttribute="bottom" id="0eZ-Bu-ZlY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vRa-ZA-0hR" secondAttribute="trailing" constant="-20" id="6Qe-P2-XO6"/>
-                            <constraint firstItem="vRa-ZA-0hR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Jw-6l-BPM"/>
-                            <constraint firstItem="vRa-ZA-0hR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Fkw-io-fUL"/>
                             <constraint firstItem="vRa-ZA-0hR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="l4Y-JU-xP4"/>
                             <constraint firstItem="vRa-ZA-0hR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="wZn-j2-En6"/>
                         </constraints>

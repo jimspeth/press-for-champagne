@@ -4,7 +4,8 @@ platform :ios, '8.0'
 # use_frameworks!
 
 target 'PressForChampagne' do
-pod 'Parse',    '~> 1.11'
+pod 'AWSCore',    '~> 2.3'
+pod 'AWSSNS',     '~> 2.3'
 end
 
 target 'PressForChampagneTests' do

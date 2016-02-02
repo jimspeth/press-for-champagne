@@ -1,13 +1,14 @@
 PODS:
-  - Bolts/Tasks (1.5.1)
-  - Parse (1.11.0):
-    - Bolts/Tasks (~> 1.5)
+  - AWSCore (2.3.4)
+  - AWSSNS (2.3.4):
+    - AWSCore (= 2.3.4)
 
 DEPENDENCIES:
-  - Parse (~> 1.11)
+  - AWSCore (~> 2.3)
+  - AWSSNS (~> 2.3)
 
 SPEC CHECKSUMS:
-  Bolts: a12663244b1d3351c738882e71902fc74db54f64
-  Parse: 886af46a0a677402f6374bb97ac212e795f70afe
+  AWSCore: 926eb781459b58d4319b0fa4f5f3bffb6b28b112
+  AWSSNS: f00c29631df2c3a37653f9f1d3d0f736daf95133
 
 COCOAPODS: 0.39.0

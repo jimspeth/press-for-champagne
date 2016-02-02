@@ -6,7 +6,6 @@
 //  Copyright © 2016 Jimco. All rights reserved.
 //
 
-#import <Parse/Parse.h>
 #import "ViewController.h"
 
 @interface ViewController ()
@@ -55,6 +54,8 @@
 
 - (void)requestChampagne
 {
+    // JGS - change to SNS
+    /*
     PFPush *push = [PFPush new];
     NSString *installationId = [PFInstallation currentInstallation].objectId;
     if (installationId) {
@@ -64,6 +65,8 @@
     }
     [push setMessage:self.message];
     [push sendPushInBackground];
+    */
+    return;
     
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Champagne Requested"
                                                                    message:nil
